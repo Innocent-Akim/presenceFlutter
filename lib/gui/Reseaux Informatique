@@ -1,0 +1,36 @@
+Erase startup config 
+
+hostname UCB
+enable secret class
+line console 0
+password cisco
+exit
+line vt4 04
+password cisco
+login
+loggin Synchronous
+exit
+Service passeword encryption
+ipv6 unicart routing
+ipv6 router
+-----------------------
+----------------------------------------------------------------------------------------------
+
+ipv6 unicast-routing
+ipv6 router rip NDEZE
+exit
+int g0/0
+ipv6 adress 2C00:2431:1::1/64
+ipv6 rip NDEZE enable
+no sh
+exit
+int s0/0/0
+ipv6 adress 2001:DB8:12/:1/64
+ipv6 rip NDEZE enable
+clock rate 1000000
+no sh
+exit
+
+
+
+
